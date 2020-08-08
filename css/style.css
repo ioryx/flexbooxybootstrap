@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Multi", sans-serif;
+    background-color: #dedede;
+    /*fondo gris*/
+}
+
+.container {
+    margin: 0 auto;
+    /*margen 0 auto*/
+    max-width: 900px;
+}
+
+section {
+    width: 100%;
+    /*seccion tien un 100 poe ciento de ancho*/
+    height: 900px;
+    /*modificamos el alto*/
+    background-color: rgb(10, 10, 10);
+    /*fondo negro*/
+    border: 1px solid #e0e0e0;
+    /*un borde de 1px solido*/
+    /*********flexbox**************/
+    display: flex;
+    /**/
+    /* con display:flex un elemento se me pone uno al lado de otro,
+    para que respete el tamaöo del contenedor flex-wrap: nowarp;*/
+    flex-wrap: wrap;
+    /*hára que respete el tamaño*/
+    /*war-reverse invierte el orden de los elementos*/
+    flex-direction: row;
+    /*row:es fila*/
+    /*aca no deberia cambiar nada */
+    /*flex-direction:column; aca se ve en fila columna una debajo del otro*/
+    /*row-riverse*/
+    /*column-riverse*/
+    /****podemos ordenarlos segun sus ejes******/
+    justify-content: space-between;
+    /*por defecto tiene un flex-star..los elementos estarian empezando desde la izquierda
+    si ponemos*/
+    /*flex-end orienta los elementos al fial del eje conservando el orden*/
+    /*flex-center podemos centrarlo en el centro*/
+    /*space-between me va a dar espacio entre los elementos al 100 % del contenedor y dispone espacio entre elemntos para que esten en la misma distancia*/
+    /*space-around tambien va a incluir espacio en el primer y ultimo elemento*/
+    align-items: center;
+    /*center se poen en el medio*/
+    /*por defecto la propiedad ens stretch es la propiedad que estira los contenidos*/
+    /*para trabajar el eje (y) tenemos algn-items*/
+    /*flex-star va al principo del contenido del eje (Y) o croos axis*/
+}
+
+article {
+    width: 25%;
+    /*es hara que cada contenedor mida la mitad*/
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 20px;
+    /*borde redondeado de 20px*/
+    background-color: white;
+    /*un fondo blanco*/
+}
+
+article img {
+    /*tiene 100 porciento para adaptar la imagen*/
+    width: 100%;
+    /*con respeto al contendor */
+}
+
+article h2 {
+    margin-top: 8px;
+}
+
+.art2 {
+    align-self: flex-end;
+    /*align-self: flex-start se cormporta segun el eje este art estaria en la parte superior*/
+    /*align-self: flex-end en esta caso el elemento se comportaria en el lugar situado abajo, independientmente del los otros elementos*/
+    /*flex-grow: 0.5 representa un 50 porciento*/
+    /*1 representa el  100 por ciento*/
+    /*flex-grow: 1 usando de esta manera el items de articilo dos se vera mas grande en este xaso en el medio*/
+    /*order: si pongo (0) no se nota ninjun cambio por que es valor nulo
+     cada elemnto del (art) tiene valor 0.si ponemos 1 uno,por ejemplo se dispone al final del elmento y el 2 pasa al final del mismo: siendo 1/3/(2)-moz-animation:
+     por ejemplo si le ponemos -1 y guardamos, ahora se posiciona en el primer lugar.recuerde que no se modifica el orden en html es solo visual*/
+}
+
+
+/*
+@media (max-width:500px) {
+    
+
+    section {
+    flex-direction: column;
+    }
+
+    article {
+   
+    width: 100%;                       }    
+ }*/
